@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <bottom>
+      <MenuBar prefHeight="34.0" prefWidth="666.0" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Thư mục">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Đóng" />
+                  <MenuItem mnemonicParsing="false" text="Lưu danh sách" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Sửa">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Xóa nhân viên" />
+                  <MenuItem mnemonicParsing="false" text="Sửa thông tin nhân viên" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Hướng Dẫn">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Tải về bản word" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Tìm Kiếm">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Tìm kiếm nhân viên" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Trợ giúp">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Số điện thoại hỗ trợ" />
+                  <MenuItem mnemonicParsing="false" text="Hỗ trợ trên web" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </bottom>
+   <right>
+      <VBox prefHeight="610.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="45.0" prefWidth="126.0" text="Họ" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.800000190734863" />
+               </font>
+            </Label>
+            <TextField prefHeight="27.0" prefWidth="144.0">
+               <effect>
+                  <Blend />
+               </effect></TextField>
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="90.0" text="Tên" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.800000190734863" />
+               </font>
+            </Label>
+            <TextField layoutX="10.0" layoutY="200.0" prefHeight="27.0" prefWidth="144.0">
+               <effect>
+                  <Blend />
+               </effect>
+            </TextField>
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="38.0" prefWidth="90.0" text="MSNV" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.800000190734863" />
+               </font>
+            </Label>
+            <TextField layoutX="10.0" layoutY="64.0" prefHeight="27.0" prefWidth="144.0">
+               <effect>
+                  <Blend />
+               </effect>
+            </TextField>
+            <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="88.0" text="THÊM" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.800000190734863" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </right>
+   <top>
+      <Pane style="-fx-background-color: #D2691E;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#edf0f2" layoutX="14.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NHÂN VIÊN" wrappingWidth="271.6125144958496">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+            <Text fill="#edf0f2" layoutX="566.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chào mừng" wrappingWidth="242.0125389099121">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <ScrollBar orientation="VERTICAL" prefHeight="363.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+   </center>
+   <left>
+      <TableView prefHeight="610.0" prefWidth="719.0" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn prefWidth="45.59997636079788" text="STT" />
+            <TableColumn prefWidth="131.9999656677246" text="Họ và Tên" />
+            <TableColumn prefWidth="80.80000305175781" text="MSNV" />
+            <TableColumn prefWidth="104.800048828125" text="Địa Chỉ" />
+            <TableColumn prefWidth="83.199951171875" text="SĐT" />
+            <TableColumn prefWidth="96.79998779296875" text="Ngày vào Làm" />
+            <TableColumn prefWidth="90.4000244140625" text="Số giờ làm/tuần" />
+            <TableColumn prefWidth="82.4000122070313" text="Tổng số giờ làm" />
+         </columns>
+      </TableView>
+   </left>
+</BorderPane>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.ChamCongController">
+   <bottom>
+      <MenuBar prefHeight="34.0" prefWidth="666.0" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Thư mục">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Đóng" />
+                  <MenuItem mnemonicParsing="false" text="Lưu danh sách" />
+                  <MenuItem mnemonicParsing="false" text="Gửi danh sách cho" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Sửa">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Sửa thông tin nhân viên" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Hướng Dẫn">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Tải về bản word" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Trợ giúp">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Số điện thoại hỗ trợ" />
+                  <MenuItem mnemonicParsing="false" text="Hỗ trợ trên web" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </bottom>
+   <right>
+      <VBox prefHeight="696.0" prefWidth="230.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="42.0" prefWidth="134.0" text="Họ và tên:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.800000190734863" />
+               </font>
+            </Label>
+            <TextField fx:id="textHoten" promptText="Họ và tên" style="-fx-background-color: transparent; -fx-border-color: #D2691E; -fx-border-width: 0px 0px 2px 0px;" />
+            <Label prefHeight="32.0" prefWidth="75.0" text="MSNV:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textMSNV" layoutX="10.0" layoutY="52.0" promptText="MSNV" style="-fx-background-color: transparent; -fx-border-color: #D2691E; -fx-border-width: 0px 0px 2px 0px;" />
+            <Label layoutX="10.0" layoutY="80.0" prefHeight="32.0" prefWidth="75.0" text="Số giờ làm:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textSogiolam" layoutX="10.0" layoutY="112.0" promptText="Số giờ làm" style="-fx-background-color: transparent; -fx-border-color: #D2691E; -fx-border-width: 0px 0px 2px 0px;" />
+            <Label layoutX="10.0" layoutY="140.0" prefHeight="32.0" prefWidth="117.0" text="Ngày tháng năm:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textNgaythangnam" layoutX="10.0" layoutY="172.0" promptText="Ngày tháng năm" style="-fx-background-color: transparent; -fx-border-color: #D2691E; -fx-border-width: 0px 0px 2px 0px;" />
+            <Label layoutX="10.0" layoutY="200.0" prefHeight="32.0" prefWidth="117.0" text="Lương:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textLuong" layoutX="10.0" layoutY="232.0" promptText="Lương" style="-fx-background-color: transparent; -fx-border-color: #D2691E; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button mnemonicParsing="false" onAction="#ThemNhanVien" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #D2691E;" text="THÊM" textFill="CHOCOLATE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label prefHeight="38.0" prefWidth="113.0" text="Tìm kiếm NV:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="chamcongSearch" layoutX="10.0" layoutY="292.0" promptText="Họ tên" style="-fx-background-color: transparent; -fx-border-color: #D2691E; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button layoutX="10.0" layoutY="414.0" mnemonicParsing="false" onAction="#SuaNhanVien" prefHeight="27.0" prefWidth="79.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #D2691E;" text="SỬA" textFill="CHOCOLATE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </right>
+   <top>
+      <Pane prefHeight="69.0" prefWidth="662.0" style="-fx-background-color: #D2691E;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#edf0f2" layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHẤM CÔNG" wrappingWidth="290.0125389099121">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+            <Text fill="#edf0f2" layoutX="579.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chào mừng" wrappingWidth="219.6125144958496">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Button layoutX="825.0" layoutY="31.0" mnemonicParsing="false" onAction="#changetoMenu" style="-fx-background-color: #FFFFFF;" text="Quay về" textFill="CHOCOLATE" />
+            <Button layoutX="905.0" layoutY="31.0" mnemonicParsing="false" onAction="#Logout" style="-fx-background-color: #FFFFFF;" text="Đăng xuất" textFill="CHOCOLATE" />
+         </children>
+      </Pane>
+   </top>
+   <left>
+      <TableView fx:id="tableuser" prefHeight="596.0" prefWidth="763.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="col_msnv" prefWidth="75.0" text="MSNV" />
+          <TableColumn fx:id="col_hoten" prefWidth="193.6000518798828" text="Họ và Tên" />
+            <TableColumn fx:id="col_tongsogio" prefWidth="124.79998779296875" text="Số giờ làm" />
+            <TableColumn fx:id="col_ngaythangnam" prefWidth="175.199951171875" text="Ngày tháng năm" />
+            <TableColumn fx:id="col_luong" prefWidth="187.199951171875" text="Lương" />
+        </columns>
+      </TableView>
+   </left>
+</BorderPane>

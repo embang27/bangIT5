@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.QuanLyController">
+   <bottom>
+      <MenuBar prefHeight="34.0" prefWidth="666.0" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Thư mục">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Đóng" />
+                  <MenuItem mnemonicParsing="false" text="Lưu danh sách" />
+                  <MenuItem mnemonicParsing="false" text="Gửi danh sách cho" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Sửa">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Xóa nhân viên" />
+                  <MenuItem mnemonicParsing="false" text="Sửa thông tin nhân viên" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Hướng Dẫn">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Tải về bản word" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Trợ giúp">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Số điện thoại hỗ trợ" />
+                  <MenuItem mnemonicParsing="false" text="Hỗ trợ trên web" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </bottom>
+   <right>
+      <VBox prefHeight="610.0" prefWidth="230.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="50.0" prefWidth="90.0" text="Họ và tên:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.800000190734863" />
+               </font>
+            </Label>
+            <TextField fx:id="textHoten" promptText="Họ" style="-fx-background-color: transparent; -fx-border-color: #D2691E; -fx-border-width: 0px 0px 2px 0px;" />
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="38.0" prefWidth="90.0" text="MSNV:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.800000190734863" />
+               </font>
+            </Label>
+            <TextField fx:id="textMSNV" layoutX="10.0" layoutY="60.0" promptText="MSNV" style="-fx-background-color: transparent; -fx-border-color: #D2691E; -fx-border-width: 0px 0px 2px 0px;" />
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="38.0" prefWidth="90.0" text="Địa chỉ:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.800000190734863" />
+               </font>
+            </Label>
+            <TextField fx:id="textDiachi" layoutX="10.0" layoutY="60.0" promptText="Địa chỉ" style="-fx-background-color: transparent; -fx-border-color: #D2691E; -fx-border-width: 0px 0px 2px 0px;" />
+            <Label layoutX="10.0" layoutY="167.0" prefHeight="38.0" prefWidth="90.0" text="SĐT:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.800000190734863" />
+               </font>
+            </Label>
+            <TextField fx:id="textSdt" layoutX="10.0" layoutY="205.0" promptText="Số điện thoại" style="-fx-background-color: transparent; -fx-border-color: #D2691E; -fx-border-width: 0px 0px 2px 0px;" />
+            <Label layoutX="10.0" layoutY="170.0" prefHeight="38.0" prefWidth="90.0" text="Ngày vào làm:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.800000190734863" />
+               </font>
+            </Label>
+            <TextField fx:id="textNgayvaolam" layoutX="10.0" layoutY="208.0" promptText="Ngày vào làm" style="-fx-background-color: transparent; -fx-border-color: #D2691E; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#ThemNhanVien" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #D2691E;" text="THÊM" textAlignment="CENTER" textFill="CHOCOLATE">
+               <font>
+                  <Font name="System Bold" size="12.800000190734863" />
+               </font>
+            </Button>
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="37.0" prefWidth="106.0" text="Tìm kiếm NV:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.800000190734863" />
+               </font>
+            </Label>
+            <TextField fx:id="quanlySearch" layoutX="10.0" layoutY="60.0" prefHeight="36.0" prefWidth="230.0" promptText="Họ tên" style="-fx-background-color: transparent; -fx-border-color: #D2691E; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="deleteButton" layoutX="10.0" layoutY="427.0" mnemonicParsing="false" onAction="#XoaNhanVien" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #D2691E;" text="XÓA" textAlignment="CENTER" textFill="CHOCOLATE">
+               <font>
+                  <Font name="System Bold" size="12.800000190734863" />
+               </font>
+            </Button>
+            <Button fx:id="deleteButton1" layoutX="10.0" layoutY="458.0" mnemonicParsing="false" onAction="#SuaNhanVien" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #D2691E;" text="SỬA" textAlignment="CENTER" textFill="CHOCOLATE">
+               <font>
+                  <Font name="System Bold" size="12.800000190734863" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </right>
+   <top>
+      <Pane prefHeight="60.0" prefWidth="1000.0" style="-fx-background-color: #D2691E;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#edf0f2" layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUẢN LÝ" wrappingWidth="290.0125389099121">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+            <Text fill="#edf0f2" layoutX="579.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chào mừng" wrappingWidth="219.6125144958496">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Button layoutX="825.0" layoutY="19.0" mnemonicParsing="false" onAction="#changetoMenu" style="-fx-background-color: #FFFFFF;" text="Quay về" textFill="CHOCOLATE" />
+            <Button layoutX="915.0" layoutY="19.0" mnemonicParsing="false" onAction="#Logout" style="-fx-background-color: #FFFFFF;" text="Đăng xuất" textFill="CHOCOLATE" />
+         </children>
+      </Pane>
+   </top>
+   <left>
+      <TableView fx:id="tableuser" prefHeight="606.0" prefWidth="762.0" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="col_msnv" prefWidth="64.00003051757812" text="MSNV" />
+            <TableColumn fx:id="col_hoten" prefWidth="147.99996948242188" text="Họ và Tên" />
+            <TableColumn fx:id="col_diachi" prefWidth="104.800048828125" text="Địa chỉ" />
+            <TableColumn fx:id="col_sdt" prefWidth="78.39996337890625" text="SĐT" />
+            <TableColumn fx:id="col_ngayvaolam" prefWidth="121.5999755859375" text="Ngày vào làm" />
+            <TableColumn fx:id="col_sogiolam1tuan" prefWidth="122.4000244140625" text="Số giờ làm/ tuần" />
+            <TableColumn fx:id="col_tongsogio" prefWidth="113.5999755859375" text="Tổng số giờ làm" />
+         </columns>
+      </TableView>
+   </left>
+</BorderPane>
